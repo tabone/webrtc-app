@@ -1,0 +1,14 @@
+{
+  "name": "app",
+  "description": "WebRTC App",
+  "main": "index.js",
+  "authors": [
+    "Luca Tabone <taboneluca3@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/tabone/webrtc-app",
+  "private": true,
+  "dependencies": {
+    "webrtc-adapter": "^3.2.0"
+  }
+}

@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.app-local {
+  flex: 1;
+}
+
+.app-remote {
+  flex: 1;
+}

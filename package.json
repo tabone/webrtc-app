@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "description": "WebRTC App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tabone/webrtc-app.git"
+  },
+  "author": "Luca Tabone <taboneluca3@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tabone/webrtc-app/issues"
+  },
+  "homepage": "https://github.com/tabone/webrtc-app#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
