@@ -8,12 +8,16 @@
   </head>
   <body>
     <main class="app">
-      <div class="app-local">
-        <video class="app-local__video"></video>
+      <div class="app-content">
+        <video autoplay></video>
       </div>
-      <div class="app-remote"></div>
+      <div class="app-sidebar">
+        <h2 class="app-sidebar__title">Users</h2>
+        <div class="app-sidebar__content">
+        </div>
+      </div>
     </main>
     <script src="bower_components/webrtc-adapter/release/adapter.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/dist/app.js"></script>
   </body>
 </html>
