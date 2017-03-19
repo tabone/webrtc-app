@@ -14,7 +14,28 @@ body {
 }
 
 .app-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 4em;
   margin-right: 250px;
+}
+
+.app-video {
+  background-color: #f1f1f1;
+  padding: 1em 1.5em;
+  border-radius: 7px;
+  box-shadow: 0px 2px 8px 0px #a5a5a5;
+}
+
+.app-video__title {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.app-video__local, .app-video__remote {
+  width: 300px;
 }
 
 .app-sidebar {
