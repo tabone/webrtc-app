@@ -21,22 +21,26 @@ module.exports = {
 
   /**
    * Function used to initialize a user.
-   * @param  {String} id   User's id.
-   * @param  {String} name User's name.
+   * @param  {String}   options.id             User's id.
+   * @param  {String}   options.name           User's name.
+   * @param  {Function} options.actions.doCall Listener to be invoked when user
+   *                                           clicks on the Call action button.
    */
-  init (id, name) {
+  init ({ id, name, actions }) {
     this.id = id
     this.name = name
-    this.element = createElement(name)
+    this.element = createElement.call(this, name, actions)
   }
 }
 
 /**
  * Function used to create the HTML Element which a user will be represented by.
- * @param  {String} name User's name
+ * @param  {String} name User's name.
+ * @param  {Function} options.actions.doCall Listener to be invoked when user
+ *                                           clicks on the Call action button.
  * @return {HTML Element} HTML Element representing the user.
  */
-function createElement (name) {
+function createElement (name, actions) {
   // Create DOM Elements
   const user = document.createElement('div')
   const userName = document.createElement('span')
@@ -49,9 +53,12 @@ function createElement (name) {
   userActions.className = 'app-user__actions'
   userCallAction.className = 'app-user__actions-call'
 
-  // Include content
+  // Include content.
   userName.innerHTML = name
   userCallAction.innerHTML = 'Call'
+
+  // Add listeners to actions.
+  userCallAction.addEventListener('click', () => actions.doCall(this))
 
   // Append DOM Elements.
   userActions.appendChild(userCallAction)
